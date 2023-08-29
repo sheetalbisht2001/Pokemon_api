@@ -20,11 +20,12 @@ public class  PokemonController {
 
 @Autowired
     public PokemonController(PokemonService pokemonService) {
-        this.pokemonService = pokemonService;
+
+    this.pokemonService = pokemonService;
     }
 
     @GetMapping("pokemon")
-    public ResponseEntity<List<PokemonDto>>getPokemons(){
+    public ResponseEntity<List<PokemonDto>> getPokemons(){
 
         return new ResponseEntity<>(pokemonService.getAllPokemon(), HttpStatus.OK);
     }
