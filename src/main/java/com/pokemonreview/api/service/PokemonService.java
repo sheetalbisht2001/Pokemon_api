@@ -10,7 +10,7 @@ public interface PokemonService  {
 
     PokemonDto updatePokemon(PokemonDto pokemonDto, int id) ;
 
-    void deletePokemon(int id);
+    void deletePokemonId(int id);
 
 
 
