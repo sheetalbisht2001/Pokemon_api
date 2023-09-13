@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/") //THIS WILL ADD API IN URL //IT LOOKS MORE NICE
+@RequestMapping("/api/")      //THIS WILL ADD API IN URL and IT LOOKS MORE NICE
 public class PokemonController {
 
     private PokemonService pokemonService;
@@ -40,7 +40,7 @@ public class PokemonController {
     @PostMapping("pokemon/create")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<PokemonDto> createPokemon(@RequestBody PokemonDto pokemonDto) {
-        return new ResponseEntity<>(pokemonService.createPokemon(pokemonDto), HttpStatus.CREATED); //HTTPSTATUS WHEN WE ARE SUCCESSFUL IN MAKING API IT WILL SHOW CREATED
+        return new ResponseEntity<>(pokemonService.createPokemon(pokemonDto), HttpStatus.CREATED);    //HTTP STATUS WHEN WE ARE SUCCESSFUL IN MAKING API IT WILL SHOW CREATED
     }
 
     @PutMapping("pokemon/{id}/update")
